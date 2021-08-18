@@ -42,16 +42,6 @@ Maria = Person("Maria", "Gutierrez", 95, status=True)
 Rey = Person("Rey", "Jones", 88, status=False)
 Lee = Person("Lee", "Williams", 72, status=True)
 
-# print("{} is my friend? {}".format(Rey.firstname, Rey.status))
-
-# Maria.introduce()
-# Rey.introduce()
-# Lee.introduce()
-
-Maria.status_change()
-Rey.status_change()
-Lee.status_change()
-
 
 class Enemy(Person):
     def __init__(self, weapon, firstname, lastname, health, status):
@@ -78,10 +68,12 @@ class Enemy(Person):
         if other.status == True:
             other.status == False
 
+    def introduce(self):
+        print("You are my mortal enemy!!!")
+
 Alex = Enemy('rock', 'Alex', 'Wayne', 75, status=False)
 
-Alex.hurt(Maria)
 
-Alex.insult(Lee)
-
-Alex.steal(Rey)
+Maria.introduce()
+Rey.introduce()
+Alex.introduce()
